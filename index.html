@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>FreshCart Grocery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="store-name">FreshCart Grocery</h1>
+    <p class="tagline"> Online grocery shopping</p>
+  </header>
+
+  <nav class="tabs" aria-label="Primary navigation">
+    <button class="tab active" data-target="clientPanel" type="button">Client</button>
+    <button class="tab" data-target="productsPanel" type="button">Products</button>
+    <button class="tab" data-target="cartPanel" type="button">Cart</button>
+  </nav>
+
+  <main class="container">
+    <section id="clientPanel" class="panel active" aria-labelledby="clientTitle">
+      <h2 id="clientTitle">Client Information</h2>
+      <p class="hint">Tell us a bit about your preferences so we can tailor your product list.</p>
+
+      <form id="prefsForm" class="card" autocomplete="off">
+        <fieldset>
+          <legend>Dietary restrictions</legend>
+
+          <label class="check">
+            <input type="checkbox" id="isVegetarian" />
+            Vegetarian (hide meat & fish)
+          </label>
+
+          <label class="check">
+            <input type="checkbox" id="isGlutenFree" />
+            Gluten-free (hide items containing wheat/gluten)
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Organic preference</legend>
+
+          <label class="radio">
+            <input type="radio" name="organicPref" value="any" checked />
+            No preference (show all)
+          </label>
+
+          <label class="radio">
+            <input type="radio" name="organicPref" value="organicOnly" />
+            Prefer organic only
+          </label>
+
+          <label class="radio">
+            <input type="radio" name="organicPref" value="nonOrganicOnly" />
+            Prefer non-organic only
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button id="applyPrefsBtn" class="primary" type="button">
+            Apply preferences
+          </button>
+          <span id="prefsStatus" class="status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+
+      <div class="note">
+        <strong>Tip:</strong> After applying preferences, go to <em>Products</em> to see your tailored list.
+      </div>
+    </section>
+    <section id="productsPanel" class="panel" aria-labelledby="productsTitle">
+      <h2 id="productsTitle">Your Targeted Products</h2>
+      <p class="hint">
+        Products are filtered based on your preferences and <strong>sorted by price</strong>.
+        Select items and add them to your cart.
+      </p>
+
+      <div class="card">
+        <div class="row">
+          <div class="pill" id="activeFilters">Filters: none</div>
+          <button id="resetSelectionsBtn" class="secondary" type="button">Clear selections</button>
+        </div>
+
+        <div id="productList" class="product-list" aria-live="polite"></div>
+
+        <div class="actions">
+          <button id="addToCartBtn" class="primary" type="button">Add selected items to cart</button>
+          <span id="addStatus" class="status" role="status" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="cartPanel" class="panel" aria-labelledby="cartTitle">
+      <h2 id="cartTitle">Cart</h2>
+      <p class="hint">Review your items and total price.</p>
+
+      <div class="card">
+        <div id="cartContents" class="cart-contents"></div>
+
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+
+        <div class="actions">
+          <button id="clearCartBtn" class="danger" type="button">Clear cart</button>
+          <span id="cartStatus" class="status" role="status" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="signature">Website designed by Priya, Deval, Darrell</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
