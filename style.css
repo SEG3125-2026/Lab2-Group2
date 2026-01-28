@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1220;
+  color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.store-name {
+  margin: 0;
+  font-size: 32px;
+}
+
+.tagline {
+  margin-top: 8px;
+  color: #cfcfcf;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.tab {
+  padding: 10px 14px;
+  border: 1px solid #555;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.tab.active {
+  border: 2px solid #6ea8fe;
+}
+
+.panel {
+  display: none;
+  margin-top: 15px;
+}
+
+.panel.active {
+  display: block;
+}
+
+.card {
+  background: #121b2f;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+fieldset {
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 12px 0;
+}
+
+legend {
+  padding: 0 6px;
+  color: #cfcfcf;
+  font-weight: bold;
+}
+
+.check,
+.radio {
+  display: block;
+  margin: 8px 0;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.primary {
+  background: #6ea8fe;
+  color: black;
+}
+
+button.secondary {
+  background: #2b3550;
+  color: white;
+}
+
+button.danger {
+  background: #ff6b6b;
+  color: black;
+}
+
+.status {
+  color: #cfcfcf;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.product {
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 12px;
+  background: #1a2440;
+}
+
+.product-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.price {
+  font-weight: bold;
+  color: #ffcc66;
+}
+
+.badges {
+  margin-top: 8px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  border: 1px solid #555;
+  margin-right: 6px;
+  margin-top: 6px;
+  color: #cfcfcf;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 2px solid #444;
+  font-size: 18px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #cfcfcf;
+}
+
+.signature {
+  font-style: italic;
+  margin: 0;
+}
